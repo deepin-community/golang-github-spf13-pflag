@@ -1,0 +1,33 @@
+Source: golang-github-spf13-pflag
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Anthony Fok <foka@debian.org>,
+           Dmitry Smirnov <onlyjob@debian.org>,
+           Félix Sipma <felix+debian@gueux.org>,
+           Tim Potter <tpot@hpe.com>,
+Section: devel
+Testsuite: autopkgtest-pkg-go
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any,
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-spf13-pflag
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-spf13-pflag.git
+Homepage: https://github.com/spf13/pflag
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/spf13/pflag
+
+Package: golang-github-spf13-pflag-dev
+Architecture: all
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Multi-Arch: foreign
+Description: Drop-in replacement for Go's flag package, implementing POSIX/GNU-style --flags
+ pflag is a drop-in replacement for Go's flag package, implementing
+ POSIX/GNU-style --flags
+ .
+ pflag is compatible with the GNU extensions to
+ the POSIX recommendations for command-line options
+ (http://www.gnu.org/software/libc/manual/html_node/Argument-Syntax.html).
+ .
+ Forked from github.com/ogier/pflag.
